@@ -58,12 +58,12 @@ public class DrawingController : MonoBehaviour
         var go = Instantiate(drawnShapeObject);
         go.transform.position = new Vector3(_points[0].x, _points[0].y, 0);
         _shapeBeingDrawn = go.GetComponent<DrawnShapeController>();
-        _shapeBeingDrawn.UpdatePoints(_points);
+        _shapeBeingDrawn.UpdatePoints(_points, levelController.GetCrayonId());
     }
 
     private void UpdateShapeObject()
     {
-        _shapeBeingDrawn.UpdatePoints(_points);
+        _shapeBeingDrawn.UpdatePoints(_points, levelController.GetCrayonId());
 
         if (!levelController.IsEnoughCrayonCharge(_points.Count))
         {
@@ -75,9 +75,9 @@ public class DrawingController : MonoBehaviour
     {
         if (_shapeBeingDrawn != null)
         {
-            _shapeBeingDrawn.SetupObject(_points);
+            var success = _shapeBeingDrawn.SetupObject(_points, levelController.GetCrayonId());
+            if (success)
+                _crayonRanOut = levelController.RemoveCrayonCharge(_points.Count);
         }
-        
-        _crayonRanOut = levelController.RemoveCrayonCharge(_points.Count);
     }
 }

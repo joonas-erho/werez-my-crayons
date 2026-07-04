@@ -27,7 +27,7 @@ public class MainMenuController : MonoBehaviour
 
     private void OpenSettings()
     {
-        
+        SceneController.Instance.ToggleMusicMute();
     }
 
     private void Quit()

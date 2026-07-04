@@ -1,0 +1,19 @@
+#Root {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#Title {
+    font-size: 80px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+Button {
+    width: 250px;
+    height: 60px;
+    margin-top: 20px;
+}

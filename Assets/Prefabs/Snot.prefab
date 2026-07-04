@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1583623015537200066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -203,8 +203,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.01, y: 2.06}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.45, y: 1.45}
+  m_EdgeRadius: 0.25
 --- !u!50 &737540068517648023
 Rigidbody2D:
   serializedVersion: 5
@@ -221,7 +221,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 944cf37bdcb04f2478f61f08a68ed865, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -250,6 +250,7 @@ MonoBehaviour:
   animator: {fileID: 7357963964615993159}
   col: {fileID: 841166775643950732}
   sr: {fileID: 5702058881224820270}
+  levelController: {fileID: 0}
   movementSpeed: 15
   jumpSpeed: 15
 --- !u!95 &7357963964615993159

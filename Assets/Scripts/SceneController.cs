@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
     private void Start()
     {
         SceneManager.LoadScene("MainMenu");
-        // Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
     public void ToggleMusicMute()

@@ -7,10 +7,16 @@ public class DrawnShapeController : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private PolygonCollider2D polygonCollider;
     
+    [SerializeField] private PhysicsMaterial2D bouncyMaterial;
+    [SerializeField] private PhysicsMaterial2D slipperyMaterial;
+    
     private readonly float _halfWidth = 0.1f;
+    private int _selectedCrayon;
+    private Rigidbody2D rb;
     
     public bool SetupObject(List<Vector2> points, int selectedCrayon)
     {
+        _selectedCrayon = selectedCrayon;
         UpdatePoints(points, selectedCrayon);
         polygonCollider.points = PolygonUtils.GeneratePolygon(points, _halfWidth);
         
@@ -27,9 +33,15 @@ public class DrawnShapeController : MonoBehaviour
             return false;
         }
         
-        var rb = this.AddComponent<Rigidbody2D>();
+        rb = this.AddComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.mass = polygonCollider.points.Length * 0.5f;
+        rb.sharedMaterial = SetMaterial(selectedCrayon);
+
+        if (selectedCrayon == 3)
+        {
+            gameObject.layer = 0;
+        }
         return true;
     }
 
@@ -75,5 +87,20 @@ public class DrawnShapeController : MonoBehaviour
             });
 
         return gradient;
+    }
+
+    private PhysicsMaterial2D SetMaterial(int index) => index switch
+    {
+        // 3 => slipperyMaterial,
+        4 => bouncyMaterial,
+        _ => null
+    };
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (_selectedCrayon == 3)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
     }
 }

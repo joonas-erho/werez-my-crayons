@@ -60,7 +60,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 30ec4ef5f7ffb7646b11d48f3077db5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DrawnShapeController
   lineRenderer: {fileID: 5925389043856039141}
   polygonCollider: {fileID: 3943654244628569807}
+  bouncyMaterial: {fileID: 6200000, guid: 9ee8022a1bc4f0e46a0dfb534bb88384, type: 2}
+  slipperyMaterial: {fileID: 6200000, guid: b9c530c14e700ec4bbd79e851b1c8f2e, type: 2}
 --- !u!60 &3943654244628569807
 PolygonCollider2D:
   m_ObjectHideFlags: 0

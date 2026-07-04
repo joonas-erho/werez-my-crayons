@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
   musicSource: {fileID: 75759222}
-  cursor: {fileID: 2800000, guid: e2734b345f0c91f44a63322a4df4ad15, type: 3}
+  cursor: {fileID: 2800000, guid: b92841ab519982b47a19c385fdf5eb55, type: 3}
 --- !u!82 &75759222
 AudioSource:
   m_ObjectHideFlags: 0

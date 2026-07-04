@@ -59,8 +59,15 @@ public class PlayerController : MonoBehaviour
         }
         
         animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
-        animator.SetBool("Grounded", _canJump);
         animator.SetBool("Died", _isDead);
+        if (rb.linearVelocityY > 0)
+        {
+            animator.SetBool("Grounded", false);
+        }
+        else
+        {
+            animator.SetBool("Grounded", true);
+        }
     }
     
     private void FixedUpdate()
@@ -72,21 +79,30 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
             _canJump = false;
         }
+        
+        Debug.Log(rb.linearVelocity);
     }
     
     private void CheckIfGrounded()
     {
+        var results = new Collider2D[1];
+        var filter = new ContactFilter2D();
+        filter.useLayerMask = true;
+        filter.layerMask = LayerMask.GetMask("Ground");
+        var count = Physics2D.OverlapCircle(groundCheck.position, .25f, filter, results);
+        
         if (!_canJump)
         {
-            var results = new Collider2D[1];
-            var filter = new ContactFilter2D();
-            filter.useLayerMask = true;
-            filter.layerMask = LayerMask.GetMask("Ground");
-            var count = Physics2D.OverlapCircle(groundCheck.position, .25f, filter, results);
             if (count > 0)
             {
                 _canJump = true;
             }
+            return;
+        }
+
+        if (count == 0)
+        {
+            _canJump = false;
         }
     }
 

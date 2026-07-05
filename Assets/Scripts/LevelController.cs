@@ -1,4 +1,7 @@
+using System.Collections;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Crayon
 {
@@ -15,6 +18,12 @@ public class LevelController : MonoBehaviour
     [SerializeField] private string nextScene;
     
     [SerializeField] private CrayonPackController crayonPackController;
+
+    [SerializeField] private Text text;
+
+    [SerializeField] private Image thoughtBg;
+    [SerializeField] private Text thoughtText;
+    [SerializeField] private string thoughtContent;
     
     private Crayon _selectedCrayon;
 
@@ -54,9 +63,22 @@ public class LevelController : MonoBehaviour
         remainingCrayonValues[2] = redCrayonLimit;
         remainingCrayonValues[3] = blueCrayonLimit;
         remainingCrayonValues[4] = yellowCrayonLimit;
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (remainingCrayonValues[i] != 0)
+            {
+                _selectedCrayon = (Crayon)i;
+                break;
+            }
+        }
         
         crayonPackController.UpdateTextures(remainingCrayonValues);
         crayonPackController.SelectCrayon((int)_selectedCrayon);
+        
+        text.text = "Level " + levelNumber;
+        thoughtText.text = thoughtContent;
+        StartCoroutine(FadeOutPanel());
     }
 
     public int GetCrayonId()
@@ -64,9 +86,9 @@ public class LevelController : MonoBehaviour
         return (int)_selectedCrayon;
     }
 
-    public void Advance()
+    public void LoadScene([CanBeNull] string sceneName)
     {
-        SceneController.Instance.LoadScene(nextScene);
+        SceneController.Instance.LoadScene(sceneName ?? nextScene);
     }
 
     public bool IsEnoughCrayonCharge(int pointCount)
@@ -148,5 +170,31 @@ public class LevelController : MonoBehaviour
         }
         
         crayonPackController.SelectCrayon((int)_selectedCrayon);
+    }
+    
+    private IEnumerator FadeOutPanel()
+    {
+        yield return new WaitForSeconds(5f);
+
+        const float fadeDuration = 2f;
+        float t = 0f;
+
+        while (t < fadeDuration)
+        {
+            t += Time.deltaTime;
+            float progress = Mathf.Clamp01(t / fadeDuration);
+
+            var bgColor = thoughtBg.color;
+            bgColor.a = Mathf.Lerp(1f, 0f, progress);
+            thoughtBg.color = bgColor;
+
+            var textColor = text.color;
+            textColor.a = Mathf.Lerp(1f, 0f, progress);
+            text.color = textColor;
+
+            yield return null;
+        }
+
+        thoughtBg.gameObject.SetActive(false);
     }
 }

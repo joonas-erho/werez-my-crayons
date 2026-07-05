@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,8 @@ public class SceneController : MonoBehaviour
 
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private Texture2D cursor;
+    
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
@@ -22,7 +25,7 @@ public class SceneController : MonoBehaviour
     
     private void Start()
     {
-        SceneManager.LoadScene("MainMenu");
+        LoadScene("MainMenu");
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
@@ -33,6 +36,30 @@ public class SceneController : MonoBehaviour
 
     public void LoadScene(string name)
     {
+        StartCoroutine(TransitionToScene(name));
+    }
+    
+    
+    public IEnumerator TransitionToScene(string name)
+    {
+        animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(name);
+    }
+    
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("test");
+        animator.SetTrigger("FadeOut");
     }
 }

@@ -10,21 +10,19 @@ public class MainMenuController : MonoBehaviour
         var root = uiDocument.rootVisualElement;
 
         root.Q<Button>("PlayButton").clicked += Play;
-        root.Q<Button>("LevelSelectButton").clicked += OpenLevelSelect;
         root.Q<Button>("SettingsButton").clicked += OpenSettings;
         root.Q<Button>("QuitButton").clicked += Quit;
     }
 
+    private bool _clicked = false;
+
     private void Play()
     {
-        
+        if (_clicked) return;
+        SceneController.Instance.LoadScene("Intro");
+        _clicked = true;
     }
-
-    private void OpenLevelSelect()
-    {
-        
-    }
-
+    
     private void OpenSettings()
     {
         SceneController.Instance.ToggleMusicMute();

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
+
+    [SerializeField] private Sprite redDeath;
     
     private void Awake() => _input = new InputSystem_Actions();
     private void OnEnable() => _input.Enable();
@@ -30,6 +33,12 @@ public class PlayerController : MonoBehaviour
     {
         if (_isDead)
         {
+            return;
+        }
+        
+        if (_input.Player.Reset.WasPressedThisFrame())
+        {
+            Die(false);
             return;
         }
         
@@ -57,21 +66,17 @@ public class PlayerController : MonoBehaviour
         {
             levelController.SwitchCrayon(1);
         }
-        
-        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+
         animator.SetBool("Died", _isDead);
-        if (rb.linearVelocityY > 0)
-        {
-            animator.SetBool("Grounded", false);
-        }
-        else
-        {
-            animator.SetBool("Grounded", true);
-        }
     }
     
     private void FixedUpdate()
     {
+        if (_isDead)
+        {
+            return;
+        }
+        
         rb.linearVelocity = new Vector2(_moveInput.x * movementSpeed, rb.linearVelocity.y);
 
         if (_jumpInput > 0.0f && _canJump)
@@ -80,7 +85,8 @@ public class PlayerController : MonoBehaviour
             _canJump = false;
         }
         
-        Debug.Log(rb.linearVelocity);
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("Vertical Speed", rb.linearVelocityY);
     }
     
     private void CheckIfGrounded()
@@ -115,7 +121,7 @@ public class PlayerController : MonoBehaviour
         var count = Physics2D.OverlapCircle(stuckInTerrainCheck.position, .1f, filter, results);
         if (count > 0)
         {
-            Die();
+            Die(false);
         }
     }
     
@@ -164,23 +170,39 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.position = downPosition;
+        string sceneName = SceneManager.GetActiveScene().name;
+        levelController.LoadScene(sceneName);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Danger"))
         {
-            Die();
+            Die(false);
         }
         
         else if (other.gameObject.layer == LayerMask.NameToLayer("Goal"))
         {
-            levelController.Advance();
+            levelController.LoadScene(null);
+        }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Danger"))
+        {
+            Die(true);
         }
     }
 
-    private void Die()
+    private void Die(bool wasRed)
     {
+        Destroy(animator);
+        if (wasRed)
+        {
+            sr.sprite = redDeath;
+        }
+        
         _isDead = true;
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;

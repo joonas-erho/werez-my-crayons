@@ -14,7 +14,7 @@ public class CrayonPackController : MonoBehaviour
     
     private Image[] images = new Image[5];
 
-    private void Start()
+    private void Awake()
     {
         images[0] = greenCrayon;
         images[1] = pinkCrayon;

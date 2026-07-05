@@ -217,7 +217,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 5
@@ -251,8 +251,9 @@ MonoBehaviour:
   col: {fileID: 841166775643950732}
   sr: {fileID: 5702058881224820270}
   levelController: {fileID: 0}
-  movementSpeed: 15
+  movementSpeed: 7
   jumpSpeed: 15
+  redDeath: {fileID: -7338420784070265648, guid: 4e20518984ebe644bb510290aa6f4153, type: 3}
 --- !u!95 &7357963964615993159
 Animator:
   serializedVersion: 7

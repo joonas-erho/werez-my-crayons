@@ -1,0 +1,22 @@
+VisualElement
+{
+    align-self: center;
+
+    max-width: 1200px;
+    max-height: 300px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+Label {
+    white-space: normal;
+    flex-shrink: 0;
+}

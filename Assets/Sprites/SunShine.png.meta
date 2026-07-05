@@ -181,12 +181,12 @@ TextureImporter:
       name: SunShine_0
       rect:
         serializedVersion: 2
-        x: 102
-        y: 242
-        width: 22
-        height: 27
+        x: 0
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: SunShine_1
       rect:
         serializedVersion: 2
-        x: 194
-        y: 237
-        width: 25
-        height: 31
+        x: 300
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: SunShine_2
       rect:
         serializedVersion: 2
-        x: 460
-        y: 248
-        width: 24
-        height: 28
+        x: 600
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,539 +243,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SunShine_3
-      rect:
-        serializedVersion: 2
-        x: 732
-        y: 252
-        width: 25
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7a8ee929931b36f0800000000000000
-      internalID: -703947368198927746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_4
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 71
-        width: 170
-        height: 171
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 506d60bff86207100800000000000000
-      internalID: 103625191263229445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_5
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 70
-        width: 174
-        height: 177
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76e9fbdd503ba82d0800000000000000
-      internalID: -3275608941182083481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_6
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 222
-        width: 24
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bc34358a761b6890800000000000000
-      internalID: -7463847241959850828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_7
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 205
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57bacbbbf2bfac5e0800000000000000
-      internalID: -1888420911296763019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_8
-      rect:
-        serializedVersion: 2
-        x: 647
-        y: 200
-        width: 26
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4eadfea27227b64e0800000000000000
-      internalID: -1987369298004288796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_9
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 70
-        width: 172
-        height: 175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 511fbdf4fc2553d20800000000000000
-      internalID: 3257600955823943957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_10
-      rect:
-        serializedVersion: 2
-        x: 808
-        y: 223
-        width: 27
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8eed5cf17e568f1e0800000000000000
-      internalID: -2163867577606611224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_11
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 178
-        width: 26
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc40888325d8af950800000000000000
-      internalID: 6483649997828523215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_12
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 181
-        width: 26
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8ccc6b70dd288d250800000000000000
-      internalID: 5969665191908396232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_13
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 147
-        width: 28
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c48b09093b70685d0800000000000000
-      internalID: -3060750428945729460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_14
-      rect:
-        serializedVersion: 2
-        x: 842
-        y: 154
-        width: 27
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50f5beede11717840800000000000000
-      internalID: 5220077820502040325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_15
-      rect:
-        serializedVersion: 2
-        x: 538
-        y: 127
-        width: 28
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e70e0fb7dda5f3820800000000000000
-      internalID: 2900136592363544702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_16
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 119
-        width: 27
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26e0d5b7786decea0800000000000000
-      internalID: -5850502988529070494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_17
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 89
-        width: 29
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69408022aeba43e10800000000000000
-      internalID: 2176553542008439958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_18
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 100
-        width: 31
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba246d1d269448ae0800000000000000
-      internalID: -1548031683132505429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_19
-      rect:
-        serializedVersion: 2
-        x: 822
-        y: 76
-        width: 27
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b0208af720da15650800000000000000
-      internalID: 6219942786618622475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_20
-      rect:
-        serializedVersion: 2
-        x: 190
-        y: 43
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58ace05942e072400800000000000000
-      internalID: 299223450525813381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_21
-      rect:
-        serializedVersion: 2
-        x: 358
-        y: 67
-        width: 27
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39a87052333ae8ac0800000000000000
-      internalID: -3850961191295284589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_22
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 61
-        width: 23
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9d5e3bf7bfe7d2a0800000000000000
-      internalID: -6712633146099212901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_23
-      rect:
-        serializedVersion: 2
-        x: 683
-        y: 50
-        width: 26
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e90618911b187e30800000000000000
-      internalID: 4501377589936785888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_24
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 43
-        width: 23
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e63e960b68626d860800000000000000
-      internalID: 7554267784887788398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_25
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 33
-        width: 22
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5f5b3fd8a532a0550800000000000000
-      internalID: 6127749114826569205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunShine_26
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 37
-        width: 22
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64ad81e39bd00c8a0800000000000000
-      internalID: -6287009990547285434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ff423ad0f0de5404693f7e039c73b60e
     internalID: 0
     vertices: []
     indices: 
@@ -783,35 +255,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":300.0,"y":300.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SunShine_0: -5189280808194300902
       SunShine_1: 2433314289579634617
-      SunShine_10: -2163867577606611224
-      SunShine_11: 6483649997828523215
-      SunShine_12: 5969665191908396232
-      SunShine_13: -3060750428945729460
-      SunShine_14: 5220077820502040325
-      SunShine_15: 2900136592363544702
-      SunShine_16: -5850502988529070494
-      SunShine_17: 2176553542008439958
-      SunShine_18: -1548031683132505429
-      SunShine_19: 6219942786618622475
       SunShine_2: 6614802936906278731
-      SunShine_20: 299223450525813381
-      SunShine_21: -3850961191295284589
-      SunShine_22: -6712633146099212901
-      SunShine_23: 4501377589936785888
-      SunShine_24: 7554267784887788398
-      SunShine_25: 6127749114826569205
-      SunShine_26: -6287009990547285434
-      SunShine_3: -703947368198927746
-      SunShine_4: 103625191263229445
-      SunShine_5: -3275608941182083481
-      SunShine_6: -7463847241959850828
-      SunShine_7: -1888420911296763019
-      SunShine_8: -1987369298004288796
-      SunShine_9: 3257600955823943957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

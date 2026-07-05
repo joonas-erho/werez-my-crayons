@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class DrawnShapeController : MonoBehaviour
 {
@@ -42,6 +43,18 @@ public class DrawnShapeController : MonoBehaviour
         {
             gameObject.layer = 0;
         }
+
+        if (selectedCrayon == 2)
+        {
+            gameObject.layer = 7;
+        }
+
+        if (selectedCrayon == 1)
+        {
+            rb.gravityScale = 0;
+            rb.mass = rb.mass / 7500;
+        }
+        
         return true;
     }
 
@@ -98,9 +111,22 @@ public class DrawnShapeController : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_selectedCrayon == 3)
+        if (_selectedCrayon == 3 && collision.gameObject.GetComponent(typeof(TilemapCollider2D)) != null)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (_selectedCrayon != 2 && collision.gameObject.layer == 9)
+        {
+            Destroy(gameObject);
+        }
+        
+        if (_selectedCrayon == 1 && collision.gameObject.layer == 7 && collision.gameObject.GetComponent(typeof(DrawnShapeController)) == null)
+        {
+            Destroy(gameObject);
         }
     }
 }

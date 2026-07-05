@@ -59,7 +59,6 @@ public class SceneController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("test");
         animator.SetTrigger("FadeOut");
     }
 }
